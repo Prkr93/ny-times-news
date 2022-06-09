@@ -6,82 +6,82 @@ const Menu = () => {
     <nav>
       <ul>
         <li className=''>
-          <a>Home</a>
+          <a href='/home'>Home</a>
         </li>
         <li className=''>
-          <a>Arts</a>
+          <a href='/arts'>Arts</a>
         </li>
         <li className=''>
-          <a>Automobiles</a>
+          <a href='/automobiles'>Automobiles</a>
         </li>
         <li className=''>
-          <a>Books</a>
+          <a href='/books'>Books</a>
         </li>
         <li className=''>
-          <a>Business</a>
+          <a href='/business'>Business</a>
         </li>
         <li className=''>
-          <a>Fashion</a>
+          <a href='/fashion'>Fashion</a>
         </li>
         <li className=''>
-          <a>Food</a>
+          <a href='/food'>Food</a>
         </li>
         <li className=''>
-          <a>Health</a>
+          <a href='/health'>Health</a>
         </li>
         <li className=''>
-          <a>Insider</a>
+          <a href='/insider'>Insider</a>
         </li>
         <li className=''>
-          <a>Magazine</a>
+          <a href='/magazine'>Magazine</a>
         </li>
         <li className=''>
-          <a>Movies</a>
+          <a href='/movies'>Movies</a>
         </li>
         <li className=''>
-          <a>NY Region</a>
+          <a href='/nyregion'>NY Region</a>
         </li>
         <li className=''>
-          <a>Obituaries</a>
+          <a href='/obituaries'>Obituaries</a>
         </li>
         <li className=''>
-          <a>Opinion</a>
+          <a href='/opinion'>Opinion</a>
         </li>
         <li className=''>
-          <a>Politics</a>
+          <a href='/politics'>Politics</a>
         </li>
         <li className=''>
-          <a>Real Estate</a>
+          <a href='/realestate'>Real Estate</a>
         </li>
         <li className=''>
-          <a>Science</a>
+          <a href='/science'>Science</a>
         </li>
         <li className=''>
-          <a>Sports</a>
+          <a href='/sports'>Sports</a>
         </li>
         <li className=''>
-          <a>Sunday Review</a>
+          <a href='/sundayreview'>Sunday Review</a>
         </li>
         <li className=''>
-          <a>Technology</a>
+          <a href='/technology'>Technology</a>
         </li>
         <li className=''>
-          <a>Theater</a>
+          <a href='/theater'>Theater</a>
         </li>
         <li className=''>
-          <a>T-Magazine</a>
+          <a href='/t-magazine'>T-Magazine</a>
         </li>
         <li className=''>
-          <a>Travel</a>
+          <a href='/travel'>Travel</a>
         </li>
         <li className=''>
-          <a>Upshot</a>
+          <a href='/upshot'>Upshot</a>
         </li>
         <li className=''>
-          <a>US</a>
+          <a href='/us'>US</a>
         </li>
         <li className=''>
-          <a>World</a>
+          <a href='/world'>World</a>
         </li>
       </ul>
     </nav>
