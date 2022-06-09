@@ -6,12 +6,6 @@ import {Route, Redirect} from 'react-router-dom';
 
 
 const App = () => {
-
-  // const [featuredSection, setFeaturedSection] = useState('home');
-
-
-
-
   return (
     <div className="App">
       <Menu />
