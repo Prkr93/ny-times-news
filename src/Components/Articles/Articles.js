@@ -1,7 +1,14 @@
 import {useState, useEffect} from 'react';
+import {getFeatured} from '../../apiCalls';
 
-
-const Articles = ({articles}) => {
+const Articles = ({section}) => {
+  const [articles, setArticles] = useState({});
+  useEffect(() => {
+    getFeatured(section)
+    .then(data => {
+      setArticles(data)
+    })
+  }, [])
 
   let featuredArticles = <p>Loading</p>;
   // <div className="multimedia">{article.multimedia}</div>
