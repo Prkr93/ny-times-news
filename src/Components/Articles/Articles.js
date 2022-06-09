@@ -40,8 +40,6 @@ const Articles = ({articles}) => {
       {featuredArticles}
     </section>
   )
-
-
 }
 
 export default Articles;

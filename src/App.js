@@ -7,7 +7,7 @@ const App = () => {
   const [articles, setArticles] = useState({});
 
   useEffect(() => {
-    getFeatured()
+    getFeatured('home')
     .then(data => {
       setArticles(data)
     })
