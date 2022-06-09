@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import {getFeatured} from './apiCalls';
+import {useState, useEffect} from 'react';
+import Articles from './Components/Articles/Articles';
+import Menu from './Components/Menu/Menu';
 
-function App() {
+
+const App = () => {
+  const [articles, setArticles] = useState({});
+  const [featuredSection, setFeaturedSection] = useState('home');
+
+  useEffect(() => {
+    getFeatured(featuredSection)
+    .then(data => {
+      setArticles(data)
+    })
+  }, [featuredSection])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu
+        featuredSection={featuredSection}
+        setFeaturedSection={setFeaturedSection}
+      />
+      <Articles
+        articles={articles}
+      />
     </div>
-  );
-}
+  )
+};
 
 export default App;
