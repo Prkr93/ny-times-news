@@ -1,14 +1,30 @@
 import {useState, useEffect} from 'react';
+import {useParams, Redirect, Link} from 'react-router-dom';
 import {getFeatured} from '../../apiCalls';
+import HighlightedArticle from '../HighlightedArticle/HighlightedArticle';
 
-const Articles = ({section}) => {
+const Articles = () => {
+  const {section, article} = useParams();
   const [articles, setArticles] = useState({});
+  const [highlightedArticle, setHighlightedArticle] = useState({});
+
+
   useEffect(() => {
     getFeatured(section)
     .then(data => {
       setArticles(data)
+      if (article) {
+        let featured = data.results.find(a => {
+          let url = a.short_url.split('/');
+          url = url[url.length - 1];
+          if (url === article) {
+            return a;
+          }
+        })
+        setHighlightedArticle(featured)
+      }
     })
-  }, [])
+  }, []);
 
   let featuredArticles = <p>Loading</p>;
   // <div className="multimedia">{article.multimedia}</div>
@@ -18,33 +34,42 @@ const Articles = ({section}) => {
   // <div className="org_facet">{article.org_facet}</div>
   // <div className="per_facet">{article.per_facet}</div>
 
+  const makePopUp = (a) => {
+    setHighlightedArticle(a)
+  }
+
+
+
+
   if (articles.results) {
-    featuredArticles = articles.results.map(article => {
+    featuredArticles = articles.results.map(a => {
       return (
-        <article>
-          <p className="abstract">{article.abstract}</p>
-          <p className="byline">{article.byline}</p>
-          <p className="created_date">{article.created_date}</p>
-          <p className="item_type">{article.item_type}</p>
-          <p className="kicker">{article.kicker}</p>
-          <p className="published_date">{article.published_date}</p>
-          <p className="section">{article.section}</p>
-          <p className="short_url">{article.short_url}</p>
-          <p className="subsection">{article.subsection}</p>
-          <p className="title">{article.title}</p>
-          <p className="updated_date">{article.updated_date}</p>
-          <p className="uri">{article.uri}</p>
-          <p className="url">{article.url}</p>
-        </article>
+        <Link onClick={() => makePopUp(a)}>
+          <article className={`section ${a ? 'article' : ''}`}>
+            <p className="abstract">{a.abstract}</p>
+            <p className="byline">{a.byline}</p>
+            <p className="created_date">{a.created_date}</p>
+            <p className="item_type">{a.item_type}</p>
+            <p className="kicker">{a.kicker}</p>
+            <p className="published_date">{a.published_date}</p>
+            <p className="section">{a.section}</p>
+            <p className="short_url">{a.short_url}</p>
+            <p className="subsection">{a.subsection}</p>
+            <p className="title">{a.title}</p>
+            <p className="updated_date">{a.updated_date}</p>
+            <p className="uri">{a.uri}</p>
+            <p className="url">{a.url}</p>
+          </article>
+        </Link>
       )
     })
   }
 
 
-
   return (
     <section>
       {featuredArticles}
+      {!!Object.keys(highlightedArticle).length && <HighlightedArticle highlightedArticle={highlightedArticle} />}
     </section>
   )
 }
