@@ -1,10 +1,16 @@
+section, article {
+  padding: 1em;
+  margin: 1em;
+}
+
 section.highlighted {
   position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: #EEEEEE;
   z-index: 10;
   padding: 1em;
+  color: #333333;
 }
