@@ -12,6 +12,11 @@
   background-color: #EEEEEE;
 }
 
+.article button {
+  margin: auto;
+  display: block;
+}
+
 @media (min-width: 600px) {
   .articles {
     display: flex;
