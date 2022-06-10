@@ -87,11 +87,11 @@ const Menu = () => {
           </li>
         </ul>
       </nav>
-    ) else {
-      return (
-        <button className='hamburger'></button>
-      )
-    }
+    )
+  } else {
+    return (
+      <button className='hamburger'><i className='fa fa-bars'></i></button>
+    )
   }
 }
 
