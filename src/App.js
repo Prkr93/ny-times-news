@@ -2,29 +2,32 @@
 import {useState, useEffect} from 'react';
 import Articles from './Components/Articles/Articles';
 import Menu from './Components/Menu/Menu';
-import {Route, Redirect} from 'react-router-dom';
+import {Route, Redirect, Switch} from 'react-router-dom';
 
 
 const App = () => {
   return (
     <div className="App">
       <Menu />
-      <Route exact path={'/'} render={() => {
-        return <Redirect to='/home' />
-      }}/>
+      <Switch>
+        <Route exact path={'/'} render={() => {
+          return <Redirect to='/home' />
+        }}/>
 
-      <Route path={'/:section'} render={({match}) => {
+        <Route path={'/:section/:article'} render={() => {
+          return (
+            <Articles />
+          )
+        }}/>
 
-        return (
-          <Articles
-            section={
-              match.params.section ?
-              match.params.section :
-              'home'
-            }
-          />
-        )
-      }}/>
+        <Route path={'/:section'} render={() => {
+          return (
+            <Articles />
+          )
+        }}/>
+
+
+      </Switch>
     </div>
   )
 };
