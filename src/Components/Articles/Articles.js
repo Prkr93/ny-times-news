@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import {useParams, Redirect, Link} from 'react-router-dom';
 import {getFeatured} from '../../apiCalls';
 import HighlightedArticle from '../HighlightedArticle/HighlightedArticle';
+import './Articles.css';
 
 const Articles = () => {
   const {section, article} = useParams();
@@ -44,7 +45,7 @@ const Articles = () => {
   if (articles.results) {
     featuredArticles = articles.results.map(a => {
       return (
-        <article className={`section ${a ? 'article' : ''}`} onClick={() => makePopUp(a)}>
+        <article className='article' onClick={() => makePopUp(a)}>
           <p className="abstract">{a.abstract}</p>
           <p className="byline">{a.byline}</p>
           <p className="created_date">{a.created_date}</p>
@@ -67,7 +68,7 @@ const Articles = () => {
   return (
     <section>
       {featuredArticles}
-      {!!Object.keys(highlightedArticle).length && <HighlightedArticle highlightedArticle={highlightedArticle} />}
+      {!!Object.keys(highlightedArticle).length && <HighlightedArticle highlightedArticle={highlightedArticle} setHighlightedArticle={setHighlightedArticle}/>}
     </section>
   )
 }

@@ -1,6 +1,11 @@
-const HighlightedArticle = ({highlightedArticle}) => {
+import './HighlightedArticle.css';
+
+const HighlightedArticle = ({highlightedArticle, setHighlightedArticle}) => {
+
+
   return (
-    <div>
+    <section className='highlighted'>
+      <button onClick={() => setHighlightedArticle({})}>X</button>
       <p className="abstract">{highlightedArticle.abstract}</p>
       <p className="byline">{highlightedArticle.byline}</p>
       <p className="created_date">{highlightedArticle.created_date}</p>
@@ -14,7 +19,7 @@ const HighlightedArticle = ({highlightedArticle}) => {
       <p className="updated_date">{highlightedArticle.updated_date}</p>
       <p className="uri">{highlightedArticle.uri}</p>
       <p className="url">{highlightedArticle.url}</p>
-    </div>
+    </section>
   )
 }
 
