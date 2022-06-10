@@ -6,6 +6,7 @@ const HighlightedArticle = ({highlightedArticle, setHighlightedArticle}) => {
   return (
     <section className='highlighted'>
       <button onClick={() => setHighlightedArticle({})}>X</button>
+      {highlightedArticle.multimedia && <img className="multimedia" src={highlightedArticle.multimedia[0].url}/>}
       <p className="abstract">{highlightedArticle.abstract}</p>
       <p className="byline">{highlightedArticle.byline}</p>
       <p className="created_date">{highlightedArticle.created_date}</p>

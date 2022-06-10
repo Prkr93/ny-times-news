@@ -1,13 +1,10 @@
-
-
-section.highlighted {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
+.highlighted {
   background-color: #EEEEEE;
-  z-index: 10;
   padding: 1em;
   color: #333333;
+  box-sizing: border-box;
+}
+
+.highlighted img {
+  max-width: 100%;
 }
