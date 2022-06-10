@@ -1,18 +1,15 @@
-article.article {
-  background-color: #EEEEEE;
-}
-
-article img {
-  max-width: 100%;
-}
-
 .article {
   margin: 1em;
+}
+
+.article img {
+  max-width: 100%;
 }
 
 .article > *:not(img) {
   padding: 1em;
   margin: 0;
+  background-color: #EEEEEE;
 }
 
 @media (min-width: 600px) {
@@ -28,18 +25,18 @@ article img {
 
 @media (min-width: 960px) {
   .article {
-    max-width: calc(33% - 6em);
+    max-width: calc(33% - 4em);
   }
 }
 
 @media (min-width: 1260px) {
   .article {
-    max-width: calc(25% - 8em);
+    max-width: calc(25% - 4em);
   }
 }
 
 @media (min-width: 1480px) {
   .article {
-    max-width: calc(20% - 10em);
+    max-width: calc(20% - 4em);
   }
 }
