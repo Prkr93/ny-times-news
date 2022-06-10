@@ -1,9 +1,8 @@
-// import {getFeatured} from './apiCalls';
 import {useState, useEffect} from 'react';
 import Articles from './Components/Articles/Articles';
 import Menu from './Components/Menu/Menu';
 import {Route, Redirect, Switch} from 'react-router-dom';
-
+import './App.css';
 
 const App = () => {
   return (
@@ -25,7 +24,6 @@ const App = () => {
             <Articles />
           )
         }}/>
-
 
       </Switch>
     </div>

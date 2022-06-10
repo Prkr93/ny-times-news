@@ -1,0 +1,45 @@
+.highlighted {
+  background-color: #EEEEEE;
+  padding: 1em;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+h4 {
+  padding-right: 3px;
+}
+
+p {
+  display: flex;
+  align-items: center;
+}
+
+.highlighted img {
+  max-width: 100%;
+}
+
+.button {
+  margin: 1em auto;
+  display: block;
+  background-color: #333333;
+  border: 1px solid #BBBBBB;
+  padding: .5em;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.button, .button a {
+  color: #EEEEEE;
+}
+
+@media (min-width: 600px) {
+  .highlighted > article {
+    display: flex;
+  }
+  .highlighted > article > *:not(img) {
+    width: 70%;
+    padding: 0 1em;
+  }
+}

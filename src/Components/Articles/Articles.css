@@ -1,0 +1,47 @@
+.article {
+  margin: 1em;
+}
+
+.article img {
+  max-width: 100%;
+}
+
+.article > *:not(img) {
+  padding: 1em;
+  margin: 0;
+  background-color: #EEEEEE;
+}
+
+.article button {
+  margin: auto;
+  display: block;
+}
+
+@media (min-width: 600px) {
+  .articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .article {
+    max-width: calc(50% - 4em);
+  }
+}
+
+@media (min-width: 960px) {
+  .article {
+    max-width: calc(33% - 4em);
+  }
+}
+
+@media (min-width: 1260px) {
+  .article {
+    max-width: calc(25% - 4em);
+  }
+}
+
+@media (min-width: 1480px) {
+  .article {
+    max-width: calc(20% - 4em);
+  }
+}

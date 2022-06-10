@@ -1,11 +1,12 @@
 import {useState} from 'react';
+import './Menu.css';
 
 const Menu = () => {
-  const [menuIsActive, setMenuActive] = useState(false);
+  const [menuIsActive, setMenuIsActive] = useState(false);
   if (menuIsActive) {
     return (
       <nav>
-        <button className='hamburger'></button>
+        <button className='hamburger' onClick={() => setMenuIsActive(false)}>X</button>
         <ul>
           <li>
             <a href='/home'>Home</a>
@@ -90,7 +91,7 @@ const Menu = () => {
     )
   } else {
     return (
-      <button className='hamburger'><i className='fa fa-bars'></i></button>
+      <button className='hamburger' onClick={() => setMenuIsActive(true)}><i className='fa fa-bars'></i></button>
     )
   }
 }
