@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# NY Times News
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NY Times News is an app designed to keep you up to date with the latest top stories from NY Times' Top Stories API.
 
-## Available Scripts
+Users are able to toggle the navigation menu and select from a list of subjects they would like news about. The app will fetch those desired news articles and display them to the user, where the user can click on a single article to see more details about it.
 
-In the project directory, you can run:
+![Screen Shot 2022-06-10 at 1 36 31 PM](https://user-images.githubusercontent.com/90285348/173138017-38a662da-e1e7-4899-baf8-4323d6a4bed9.png)
 
-### `npm start`
+![Screen Shot 2022-06-10 at 1 36 47 PM](https://user-images.githubusercontent.com/90285348/173138008-e7820248-f6c1-441f-a08a-6e707ef230d6.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Challenges/Wins
+- Was able to make a dynamic fetch call in order to fetch from multiple endpoints.
+- Reusable component structure and fully responsive design.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Component Architecture
+- App
+  - Menu
+  - Articles
+    - HighlightedArticle
 
-### `npm test`
+## Skills/Practices
+- React
+- HTML/JS/CSS
+- Responsive Design
+- OOP
+- Dynamic Programming
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Dynamic Endpoint
+- `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`
+- Section can be a list of any of the provided NY Times' Top Stories API endpoints.
+  - arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, world
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Planned Additions
+- Add a header and footer, and ensure proper branding.
+- Add E2E testing to ensure proper error handling.
+- Add in error handling for a 429 error (too many requests).
+- Add some finishing styling.
+- Deploy through Surge or Heroku.
+- Given more time, I would have like to setup and utilize a project board and wireframe more effectively.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Setup Instructions
+- `git clone` this repo to your machine.
+- Run `npm i` to install dependencies.
+- Run `npm start` to start the server.
+- The site can then be view at http://localhost:3000.
