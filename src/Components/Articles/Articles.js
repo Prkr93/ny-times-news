@@ -28,7 +28,7 @@ const Articles = () => {
   }, []);
 
   let featuredArticles = <p>Loading</p>;
-  // <div className="multimedia">{article.multimedia}</div>
+  // <div </div>
   // <div className="des_facet">{article.des_facet}</div>
   // <div className="geo_facet">{article.geo_facet}</div>
   // <div className="material_type_facet">{article.material_type_facet}</div>
@@ -46,6 +46,7 @@ const Articles = () => {
     featuredArticles = articles.results.map(a => {
       return (
         <article className='article' onClick={() => makePopUp(a)}>
+          <img className="multimedia" src={a.multimedia[0].url}/>
           <p className="abstract">{a.abstract}</p>
           <p className="byline">{a.byline}</p>
           <p className="created_date">{a.created_date}</p>
