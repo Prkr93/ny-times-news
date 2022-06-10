@@ -67,7 +67,7 @@ const Articles = () => {
 
 
   return (
-    <section>
+    <section className='articles'>
       {featuredArticles}
       {!!Object.keys(highlightedArticle).length && <HighlightedArticle highlightedArticle={highlightedArticle} setHighlightedArticle={setHighlightedArticle}/>}
     </section>

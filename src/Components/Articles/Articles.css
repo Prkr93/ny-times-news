@@ -1,3 +1,45 @@
 article.article {
-  background-color: white;
+  background-color: #EEEEEE;
+}
+
+article img {
+  max-width: 100%;
+}
+
+.article {
+  margin: 1em;
+}
+
+.article > *:not(img) {
+  padding: 1em;
+  margin: 0;
+}
+
+@media (min-width: 600px) {
+  .articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .article {
+    max-width: calc(50% - 4em);
+  }
+}
+
+@media (min-width: 960px) {
+  .article {
+    max-width: calc(33% - 6em);
+  }
+}
+
+@media (min-width: 1260px) {
+  .article {
+    max-width: calc(25% - 8em);
+  }
+}
+
+@media (min-width: 1480px) {
+  .article {
+    max-width: calc(20% - 10em);
+  }
 }
