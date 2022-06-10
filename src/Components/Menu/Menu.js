@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import './Menu.css';
 
 const Menu = () => {
   const [menuIsActive, setMenuIsActive] = useState(false);

@@ -1,4 +1,3 @@
-// import {getFeatured} from './apiCalls';
 import {useState, useEffect} from 'react';
 import Articles from './Components/Articles/Articles';
 import Menu from './Components/Menu/Menu';
@@ -25,7 +24,6 @@ const App = () => {
             <Articles />
           )
         }}/>
-
 
       </Switch>
     </div>
