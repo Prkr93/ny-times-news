@@ -44,23 +44,21 @@ const Articles = () => {
   if (articles.results) {
     featuredArticles = articles.results.map(a => {
       return (
-        <Link onClick={() => makePopUp(a)}>
-          <article className={`section ${a ? 'article' : ''}`}>
-            <p className="abstract">{a.abstract}</p>
-            <p className="byline">{a.byline}</p>
-            <p className="created_date">{a.created_date}</p>
-            <p className="item_type">{a.item_type}</p>
-            <p className="kicker">{a.kicker}</p>
-            <p className="published_date">{a.published_date}</p>
-            <p className="section">{a.section}</p>
-            <p className="short_url">{a.short_url}</p>
-            <p className="subsection">{a.subsection}</p>
-            <p className="title">{a.title}</p>
-            <p className="updated_date">{a.updated_date}</p>
-            <p className="uri">{a.uri}</p>
-            <p className="url">{a.url}</p>
-          </article>
-        </Link>
+        <article className={`section ${a ? 'article' : ''}`} onClick={() => makePopUp(a)}>
+          <p className="abstract">{a.abstract}</p>
+          <p className="byline">{a.byline}</p>
+          <p className="created_date">{a.created_date}</p>
+          <p className="item_type">{a.item_type}</p>
+          <p className="kicker">{a.kicker}</p>
+          <p className="published_date">{a.published_date}</p>
+          <p className="section">{a.section}</p>
+          <p className="short_url">{a.short_url}</p>
+          <p className="subsection">{a.subsection}</p>
+          <p className="title">{a.title}</p>
+          <p className="updated_date">{a.updated_date}</p>
+          <p className="uri">{a.uri}</p>
+          <p className="url">{a.url}</p>
+        </article>
       )
     })
   }
